@@ -1,0 +1,118 @@
+<section class="product-category">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title text-center">
+            <h2>Product Category</h2>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="category-box">
+            <a href="{{section.settings.product_left_top_url}}">
+              <img src="{{section.settings.product_left_top_image | img_url: '1920x'}}" alt="">
+              <div class="content">
+                <h3>{{section.settings.product_left_top_text}}</h3>
+                <p>{{section.settings.product_left_top_desc}}</p>
+              </div>
+            </a>  
+          </div>
+          <div class="category-box">
+            <a href="{{section.settings.product_left_down_url}}">
+              <img src="{{section.settings.product_left_down_image | img_url: '1920x'}}" alt="">
+              <div class="content">
+                <h3>{{section.settings.product_left_down_text}}</h3>
+                <p>{{section.settings.product_left_down_desc}}</p>
+              </div>
+            </a>  
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="category-box category-box-2">
+            <a href="{{section.settings.product_right_url}}">
+              <img src="{{section.settings.product_right_image | img_url: '1920x'}}" alt="">
+              <div class="content">
+                <h3>{{section.settings.product_right_text}}</h3>
+                <p>{{section.settings.product_right_desc}}</p>
+              </div>
+            </a>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% schema %}
+      {
+          "name" : "Homepage Banners",
+          "settings": [
+              {
+                  "type": "text",
+                  "id": "product_left_top_text",
+                  "label": "Top Left Title"                 
+              },
+              {
+                  "type": "text",
+                  "id": "product_left_top_desc",
+                  "label": "Top Left Description"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "product_left_top_image",
+                  "label": "Top Left Image"
+              },
+              {
+                  "type": "url",
+                  "id": "product_left_top_url",
+                  "label": "Top Left URL Link"
+                  
+              },
+
+
+              {
+                  "type": "text",
+                  "id": "product_left_down_text",
+                  "label": "Down Left Title"                  
+              },
+              {
+                  "type": "text",
+                  "id": "product_left_down_desc",
+                  "label": "down Left Description"                  
+              },
+              {
+                  "type": "image_picker",
+                  "id": "product_left_down_image",
+                  "label": "down Left Image"
+              },
+              {
+                  "type": "url",
+                  "id": "product_left_down_url",
+                  "label": "down Left URL Link"
+                  
+              },
+
+              {
+                  "type": "text",
+                  "id": "product_right_text",
+                  "label": "Right Title"                  
+              },
+              {
+                  "type": "text",
+                  "id": "product_right_desc",
+                  "label": "Right Description"                  
+              },
+              {
+                  "type": "image_picker",
+                  "id": "product_right_image",
+                  "label": "Right Image"
+              },
+              {
+                  "type": "url",
+                  "id": "product_right_url",
+                  "label": "Right URL Link"
+                  
+              }
+          ]
+      }
+  {% endschema %}
